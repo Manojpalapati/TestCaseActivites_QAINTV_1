@@ -15,12 +15,18 @@ public class App {
 
         //TODO: call your test case functions one after other here
 
-        tests.testCase01();
-
-        //END Tests
-
-
-        tests.endTest(); // End your test by clearning connections and closing browser
+        try {
+            tests.testCase01();
+            tests.testCase02();
+            tests.testCase03();
+            tests.testCase04();
+            tests.testCase05();
+            tests.testCase06();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            tests.endTest(); // End your test by clearing connections and closing the browser
+        }
     }
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
